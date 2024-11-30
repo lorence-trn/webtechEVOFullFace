@@ -1,0 +1,259 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    background-color: #121212; /* Dark background */
+    color: #FFF; /* White text */
+    line-height: 1.6;
+}
+
+/* Container */
+.checkout-container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #1d1d1d; /* Dark container */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Headers */
+h2 {
+    margin-bottom: 20px;
+    color: #FFF; /* White headers */
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ddd; /* Light gray label */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #FFF;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 6px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    background-color: #333;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    align-items: center;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.total-cost {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffae42; /* Yellow Orange for total cost */
+    text-align: right; /* Align total price to the right */
+}
+
+/* Place Order Button */
+.place-order {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#place-order-btn {
+    background-color: #ffae42;
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#place-order-btn:hover {
+    background-color: #ffae42;
+    transform: scale(1.05);
+}
+
+#place-order-btn:active {
+    transform: scale(1);
+}
+
+/* Input Field Styles */
+input[type="radio"]:checked + label {
+    color: #ffae42; /* Highlight the label for selected radio button */
+}
+
+input[type="radio"]:focus {
+    outline: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #1d1d1d;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: #FFF;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.radio-option {
+    display: block;
+    margin: 18px 0;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.radio-option input {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Modal Submit Button */
+.submit-btn {
+    background-color: #ffae42;
+    color: black;
+    font-size: 1.2rem;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffae42;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 25px;
+    background-color: #ffae42;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.notification.hide {
+    opacity: 0;
+}
+
+
+/* Contact Number Input */
+#contact {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #FFF;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 6px;
+}
+
+#contact:focus {
+    background-color: #333; /* Darker on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Light glow effect on focus */
+    border-color: #ffae42; /* Yellow Orange border on focus */
+}
+
+/* Add Icon Inside Input Field */
+#contact::before {
+    content: '\260E'; /* Unicode for a phone icon */
+    font-size: 1.4rem;
+    color: #ffae42; /* Green icon color */
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Positioning the form group container to accommodate the phone icon */
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and links to stylesheets -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <!-- Link to Boxicons for social media icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="" alt="">
+    </div>
+
+    <!-- Header Section with navigation -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Navbar links for different sections -->
+            <a href="#Home">Home</a>
+            <a href="productpage.html">Products</a>
+            <a href="#Abouts">About</a>
+            <a href="#Contacts">Contacts</a>
+            <a href="adminpage.html">Admin Page</a>
+        </nav>
+        <!-- Social media links -->
+        <nav class="social-media">
+            <!-- Social media icons with links -->
+            <a href="https://www.facebook.com/login" target="_blank" style="--i:1;">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" style="--i:2;">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" style="--i:3;">
+                <i class='bx bxl-twitter'></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-content">
+            <h1>EVO Full Face Helmet Shop</h1>
+            <h3>Protect with Style</h3>
+            <p>Safety meets sophistication with our premium helmet collection</p>
+            <a class="explore" href="productpage.html">Explore</a> <!-- Call to action -->
+        </div>
+    </section>
+
+    <!-- Product Section where products will be displayed dynamically -->
+    <section id="Product"> 
+        <h2 class="product-category"></h2> <!-- Placeholder for product category -->
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button> <!-- Previous button -->
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button> <!-- Next button -->
+        <div class="product-container" id="product-container">
+            <!-- Products will be injected here dynamically -->
+        </div>
+    </section>    
+
+    <!-- About Us Section -->
+    <section id="Abouts">
+        <div class="about-container">
+            <h2 class="section-title">About Us</h2>
+            <p class="about-text">
+                Welcome to EVO Helmet, your premier destination for high-quality motorcycle helmets. 
+                Since our establishment, we've been committed to providing riders with the perfect 
+                blend of safety, comfort, and style. Our extensive collection features helmets from 
+                leading manufacturers, each carefully selected to meet rigorous safety standards 
+                while offering cutting-edge design.
+            </p>
+            <p class="about-text">
+                At EVO Helmet, we understand that every rider is unique. That's why we offer a diverse 
+                range of helmets - from full-face to modular designs, from racing-inspired models to 
+                urban-friendly options. Our expert team is dedicated to helping you find the perfect 
+                helmet that matches your riding style and safety needs.
+            </p>
+            <p class="about-text">
+                Your safety is our top priority. All our helmets meet or exceed DOT and ECE safety 
+                standards, ensuring you get the protection you deserve on every ride. Visit our shop 
+                today and experience the EVO difference - where protection meets perfection.
+            </p> <!-- About description -->
+        </div>
+    </section>
+    
+    <!-- Contact Us Section -->
+    <section id="Contacts">
+        <div class="contact-container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-description">Message us!</p>
+            <div class="contact-info">
+                <!-- Contact information -->
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> support@EVOFULLFACEHelmetshop.com</p>
+                <p><strong>Address:</strong> 123 St Pardillo, Cebu City, Colon </p>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a message:</h3>
+                <!-- Contact form -->
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

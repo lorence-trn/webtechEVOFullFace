@@ -1,0 +1,537 @@
+/* General reset for margin, padding, box-sizing, and font for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Ensures padding and borders don't affect element's size */
+  font-family: sans-serif;  /* Applies sans-serif font family */
+}
+
+body {
+  background-color: #111111;  /* Dark background */
+  color: #ffffff;  /* White text */
+}
+
+/* Smooth scrolling behavior across the document */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Header Styling */
+.header {
+  position: fixed;  /* Keeps the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Ensures header takes full width */
+  padding: 20px 8%;  /* Adds padding on the sides */
+  display: flex;  /* Flexbox for layout */
+  justify-content: space-between;  /* Spaces out logo and navbar */
+  align-items: center;  /* Centers items vertically */
+  z-index: 100;  /* Ensures header stays above other content */
+  margin-top: 0;  /* Adds a margin to the top */
+  background-color: rgba(17, 17, 17, 0.95);  /* Semi-transparent dark background */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar Styling */
+.nav {
+  display: flex;  /* Flexbox for layout */
+  justify-content: center;  /* Centers navbar items horizontally */
+  align-items: center;  /* Aligns navbar items vertically */
+  flex-grow: 1;  /* Allows navbar to grow and take available space */
+}
+
+.nav a {
+  text-align: center;  /* Centers text inside navbar items */
+  font-size: 16px;  /* Sets font size */
+  color: #ffffff;  /* Sets text color */
+  text-decoration: none;  /* Removes underline from links */
+  font-weight: 500;  /* Makes text bold */
+  margin-left: 100px;  /* Adds spacing between links */
+  transition: 0.3s;  /* Smooth transition for hover effect */
+  opacity: 0;  /* Initially hidden */
+  animation: slideTop 1s ease forwards;  /* Animates navbar links sliding in from top */
+  animation-delay: calc(0.2s * var(--i));  /* Delays animation for each item */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav a:hover {
+  color: #ffae42;  /* Gold color on hover */
+  text-decoration: none;  /* Removes underline from links */
+  opacity: 0.8;
+}
+
+/* Home Section Styling */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* Full viewport height */
+  display: flex;  /* Flexbox for layout */
+  justify-content: center;  /* Centers content horizontally */
+  align-items: center;  /* Centers content vertically */
+  padding: 50px 8% 0;  /* Adds padding at top and sides */
+  overflow: hidden;  /* Hides overflowing content */
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.9)),
+              url('path-to-your-helmet-background.jpg');  /* Add a background image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Home Content Styling */
+.home-content {
+  max-width: 630px;  /* Limits width of content */
+  text-align: center;  /* Centers text inside home-content */
+}
+
+/* Home Title and Content Animations */
+.home-content h1,
+.home-content h3,
+.home-content p {
+  opacity: 0;  /* Initially hidden */
+  animation: fadeIn .5s ease forwards;  /* Applies fade-in animation */
+  animation-delay: 0.5s;  /* Delays animation */
+}
+
+.home-content h1 {
+  font-size: 60px;  /* Large font size for title */
+  line-height: 1.2;  /* Controls line height for title */
+  animation-name: slideBottom;  /* Slides title in from bottom */
+  color: #ffae42;  /* Gold color for main title */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.home-content h3 {
+  font-size: 36px;  /* Medium font size for subtitle */
+  color: #ffffff;  /* Sets subtitle color */
+  animation-name: slideRight;  /* Slides subtitle in from right */
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 18px;  /* Sets font size for paragraph */
+  margin: 15px 0 30px;  /* Adds margin above and below paragraph */
+  animation-name: slideLeft;  /* Slides paragraph in from left */
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Explore Button Styling */
+.explore {
+  display: inline-block;  /* Makes button inline */
+  padding: 15px 35px;  /* Adds padding around the text */
+  background: #ffae42;  /* Sets background color */
+  border: none;  /* Sets border color */
+  border-radius: 6px;  /* Rounds corners */
+  box-shadow: 0 0 10px rgba(0,0,0,.1);  /* Adds subtle shadow */
+  font-size: 20px;  /* Font size for button text */
+  color: #111111;  /* Sets text color */
+  letter-spacing: 1px;  /* Adds space between letters */
+  text-decoration: none;  /* Removes underline */
+  font-weight: 600;  /* Makes button text bold */
+  opacity: 0;  /* Initially hidden */
+  animation: slideLeft 1s ease forwards;  /* Slides button in from left */
+  animation-delay: 0.5s;  /* Delays animation */
+  text-transform: uppercase;
+}
+
+.explore:hover {
+  background: #ffffff;  /* Makes background transparent on hover */
+  color: #111111;  /* Changes text color to black on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Social Media Icons - Updated */
+.social-media {
+    display: flex;
+    width: 180px;  /* Slightly increased width */
+    height: 40px;
+    justify-content: space-between;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ffae42;  /* Gold border */
+    border-radius: 50%;  /* Makes icons circular */
+    text-decoration: none;
+    transition: all 0.3s ease;  /* Smooth transition */
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: #ffae42;
+    transform: translateY(-3px);  /* Slight lift effect */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);  /* Gold glow effect */
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover i {
+    color: #111111;  /* Dark color on hover */
+}
+
+/* About and Contact Sections */
+#Abouts, #Contacts {
+  color: black;
+  text-align: center;  /* Centers text */
+  font-size: 40px;  /* Large font size for section title */
+  height: 100vh;  /* Full viewport height */
+  display: flex;  /* Flexbox layout */
+  justify-content: center;  /* Centers content horizontally */
+  align-items: center;   /* Centers content vertically */
+}
+
+/* Animations for page elements */
+@keyframes slideTop {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideSci {
+  0% { transform: translateX(100px) rotate(45deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(45deg); opacity: 1; }
+}
+
+@keyframes slideBottom {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Products Section */
+#Product {
+  position: relative;
+  padding: 60px 0;
+  background-color: #111111;
+}
+
+.product-category {
+  padding: 0 10vw;  /* Adds padding on left and right */
+  font-size: 30px;  /* Large font size */
+  font-weight: 500;  /* Medium font weight */
+  margin-bottom: 40px;  /* Adds bottom margin */
+  text-transform: capitalize;  /* Capitalizes category text */
+  color: #ffae42;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.product-container {
+  padding: 0 10vw;  /* Adds padding on left and right */
+  display: flex;  /* Flexbox for horizontal product layout */
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  scroll-behavior: smooth;  /* Smooth scrolling */
+}
+
+.product-container::-webkit-scrollbar {
+  display: flex;  /* Hides scrollbar */
+}
+
+.product-card {
+  margin-top: 300px;  /* Adds top margin */
+  flex: 0 0 auto;  /* Prevents product card from shrinking */
+  width: 250px;  /* Fixed width for product card */
+  height: 450px;  /* Fixed height for product card */
+  margin-right: 40px;  /* Adds spacing between cards */
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;  /* Full width of the product card */
+  height: 300px;  /* Adjusted height */
+  overflow: hidden;  /* Hides overflow of the image */
+}
+
+.product-thumb {
+  width: 100%;  /* Full width of the product image */
+  height: 100%;  /* Full height of the product image */
+  object-fit: contain;  /* Changed to contain for better fit */
+  padding: 20px;  /* Added padding for better product display */
+  background: #ffffff;  /* White background for product images */
+}
+
+.discount-tag {
+  position: absolute;
+  background: #fff;  /* White background for discount tag */
+  padding: 5px;  /* Adds padding */
+  border-radius: 5px;  /* Rounds the corners */
+  color: #ff7d7d;  /* Sets text color for discount */
+  right: 10px;  /* Position it to the right */
+  top: 10px;  /* Position it at the top */
+  text-transform: capitalize;  /* Capitalizes the text */
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);  /* Centers button horizontally */
+  padding: 10px;  /* Adds padding */
+  width: 90%;  /* Takes 90% of the card width */
+  text-transform: capitalize;  /* Capitalizes button text */
+  border: none;  /* Removes border */
+  outline: none;  /* Removes outline */
+  background: #ffae42;  /* Red background color */
+  border-radius: 5px;  /* Rounds corners */
+  transition: 0.5s;  /* Smooth transition */
+  cursor: pointer;  /* Changes cursor on hover */
+  opacity: 0;  /* Initially hidden */
+  font-weight: 600;  /* Makes button text bold */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-card:hover .card-btn {
+  opacity: 1;  /* Makes button visible when card is hovered */
+}
+
+.card-btn:hover {
+  background: #ffffff;  /* Changes background color on hover */
+  color: #111111;  /* Changes text color on hover */
+}
+
+/* Product Info Section */
+.product-info {
+  width: 100%;  /* Full width */
+  height: 100px;  /* Fixed height */
+  padding-top: 10px;  /* Adds top padding */
+  padding: 20px;
+  background: #1a1a1a;
+}
+
+.product-brand {
+  text-transform: uppercase;  /* Capitalizes brand name */
+  color: #ffae42;
+}
+
+.product-short-description {
+  width: 100%;
+  height: 20px;  /* Fixed height for description */
+  line-height: 20px;  /* Aligns text vertically */
+  overflow: hidden;  /* Hides overflowing text */
+  opacity: 0.5;  /* Makes description slightly transparent */
+  text-transform: capitalize;  /* Capitalizes text */
+  margin: 5px 0;  /* Adds margin above and below */
+  color: #cccccc;
+}
+
+.price {
+  font-weight: 900;  /* Makes price text bold */
+  font-size: 20px;  /* Sets font size */
+  color: #ffffff;
+}
+
+.actual-price {
+  margin-left: 20px;  /* Adds left margin */
+  opacity: 0.5;  /* Makes the original price text less visible */
+  text-decoration: line-through;  /* Strikes through the original price */
+}
+
+/* Button Controls for Product Carousel */
+.pre-btn,
+.nxt-btn {
+  border: none;  /* Removes border */
+  width: 10vw;  /* Sets button width */
+  height: 100%;  /* Takes full height of the container */
+  position: absolute;
+  top: 0;  /* Position buttons at top */
+  display: flex;  /* Flexbox layout */
+  justify-content: center;  /* Centers the button */
+  align-items: center;  /* Centers the button */
+  background: linear-gradient(90deg, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0) 100%);  /* Gradient background */
+  cursor: pointer;  /* Changes cursor to pointer */
+  z-index: 8;  /* Ensures buttons are above other content */
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);  /* Rotates the button */
+}
+
+.nxt-btn {
+  right: 0;  /* Positions next button on the right */
+}
+
+.pre-btn img,
+.nxt-btn img {
+  filter: invert(1);  /* Makes arrows white */
+  opacity: 0.5;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;  /* Makes arrows more visible on hover */
+}
+
+/* Collection Section for Featured Products */
+.collection-container {
+  width: 100%;
+  display: grid;  /* Uses grid layout */
+  grid-template-columns: repeat(2, 1fr);  /* Creates two equal-width columns */
+  grid-gap: 10px;  /* Adds space between items */
+}
+
+.collection {
+  position: relative;  /* Positions child elements */
+}
+
+.collection img {
+  width: 100%;  /* Full width of the collection container */
+  height: 100%;  /* Full height of the container */
+  object-fit: cover;  /* Ensures images cover the area */
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;  /* Centers text vertically */
+  left: 50%;  /* Centers text horizontally */
+  transform: translate(-50%, -50%);  /* Centers text */
+  text-align: center;  /* Centers text inside container */
+  color: #fff;  /* White text color */
+  font-size: 50px;  /* Large font size */
+  text-transform: capitalize;  /* Capitalizes text */
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;  /* Makes this collection span across both columns */
+  margin-bottom: 20px;  /* Adds bottom margin */
+}
+
+/* About Section Styling */
+#Abouts {
+    color: #333;  /* Darker, more professional text color */
+    text-align: left;  /* Left-aligned text for modern look */
+    font-size: 24px;
+    padding: 80px 10vw;  /* Increased padding */
+    background-color: #ffffff;  /* Clean white background */
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#Abouts .section-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: 700;  /* Bold weight */
+    color: #1a1a1a;
+    letter-spacing: -0.5px;  /* Tighter letter spacing for modern look */
+    text-align: center;  /* Center the title */
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;  /* Increased line height for better readability */
+    margin-bottom: 24px;
+    color: #4a4a4a;  /* Softer text color for body text */
+    font-weight: 400;  /* Regular weight for body text */
+    letter-spacing: 0.2px;
+}
+
+/* Contact Section Styling */
+#Contacts {
+color: black;
+text-align: center;
+font-size: 24px;
+padding: 50px 10vw;  /* Adds padding */
+background-color: #f9f9f9;  /* Light background */
+min-height: 100vh;  /* Full viewport height */
+}
+
+#Contacts h2 {
+font-size: 40px;  /* Large title size */
+margin-bottom: 20px;  /* Adds bottom margin */
+font-weight: bold;  /* Bold title */
+}
+
+#Contacts p {
+font-size: 18px;  /* Sets paragraph font size */
+line-height: 1.6;  /* Increases line height for readability */
+max-width: 800px;  /* Limits paragraph width */
+margin: 0 auto 30px;  /* Centers paragraph */
+}
+
+.contact-info {
+font-size: 18px;  /* Sets font size for contact information */
+margin-bottom: 40px;  /* Adds margin at bottom */
+}
+
+.contact-info p {
+margin: 10px 0;  /* Adds margin between contact info items */
+}
+
+.contact-info strong {
+color: #333;  /* Darkens strong text */
+}
+
+/* Contact Form Styling */
+.contact-form input,
+.contact-form textarea {
+width: 100%;  /* Takes full width */
+padding: 10px;  /* Adds padding inside inputs */
+margin: 10px 0;  /* Adds margin between inputs */
+border: 2px solid #ccc;  /* Light border for inputs */
+border-radius: 5px;  /* Rounded corners */
+font-size: 16px;  /* Font size for text inside inputs */
+}
+
+.contact-form button {
+padding: 12px 20px;  /* Adds padding inside button */
+background-color: #ffae42;  /* Red background color */
+color: white;  /* White text color */
+border: none;  /* Removes border */
+border-radius: 5px;  /* Rounded corners */
+font-size: 18px;  /* Font size */
+cursor: pointer;  /* Changes cursor to pointer */
+transition: background-color 0.3s ease;  /* Smooth background color transition */
+}
+
+.contact-form button:hover {
+background-color: #ffae42;  /* Darkens background color on hover */
+}
+
+/* Optional: For larger screens, increase padding for better alignment */
+@media (min-width: 768px) {
+#Abouts, #Contacts {
+    padding: 50px 15vw;  /* Adjusts padding for larger screens */
+}
+}

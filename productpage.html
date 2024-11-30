@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags to set the character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page shown in the browser tab -->
+    <title>Product Page</title>
+    
+    <!-- Link to the external stylesheet for styling the page -->
+    <link rel="stylesheet" href="productpage.css">
+</head>
+<body>
+    <!-- Button to trigger the cart modal -->
+    <button id="cart-btn" class="cart-btn">My Cart</button>
+
+    <!-- Filter section for search input and sorting dropdown -->
+    <div class="filters">
+        <!-- Input box for product search -->
+        <input id="search-input" type="text" placeholder="Search products..." />
+        
+        <!-- Dropdown for sorting products -->
+        <select id="sort-select">
+            <option value="" disabled selected>Sort by</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="productCode-asc">Code: Ascending</option>
+            <option value="productCode-desc">Code: Descending</option>
+        </select>
+    </div>
+
+    <!-- Main container for product display -->
+    <div class="container">
+        <header>
+            <!-- Heading for the product section -->
+            <h1>Available Products</h1>
+        </header>
+        
+        <!-- Container to hold the product cards -->
+        <div id="product-list" class="product-grid">
+            <!-- Product cards will be dynamically injected here -->
+        </div>
+    </div>
+
+    <!-- Cart modal window (hidden by default) -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <!-- Close button for the modal -->
+            <span class="close" id="close-cart-modal">×</span>
+            
+            <!-- Title of the cart modal -->
+            <h2 class="modal-title">Your Cart</h2>
+            
+            <!-- Cart items will be dynamically added here -->
+            <div id="cart-items" class="cart-items"></div>
+            
+            <!-- Checkout button -->
+            <button id="checkout-btn" class="submit-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file that powers the functionality of the page -->
+    <script src="productpage.js"></script>
+</body>
+</html>

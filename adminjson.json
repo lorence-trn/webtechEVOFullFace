@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "image": "Images/ALLIANCE.jpg",
+        "name": "Alliance",
+        "price": "3980",
+        "inventory": 4,
+        "productCode": "M1-01 Alliance"
+    },
+    {
+        "id": 2,
+        "image": "Images/ARDENT.jpg",
+        "name": "Ardent",
+        "price": "4180",
+        "inventory": 10,
+        "productCode": "SR-09 Ardent"
+    },
+    {
+        "id": 3,
+        "image": "Images/CARBONDIAMOND.jpg",
+        "name": "Carbon Diamond",
+        "price": "8500",
+        "inventory": 10,
+        "productCode": "GT-PRO Carbon Diamond"
+    },
+    {
+        "id": 4,
+        "image": "Images/CarbonSTwill.jpg",
+        "name": "Carbon S Twill",
+        "price": "12500",
+        "inventory": 10,
+        "productCode": "XR-001 Carbon S Twill"
+    },
+    {
+        "id": 5,
+        "image": "Images/CONTOUR.jpg",
+        "name": "Contour",
+        "price": "4180",
+        "inventory": 4,
+        "productCode": "SR-09 Contour"
+    },
+    {
+        "id": 6,
+        "image": "Images/GLAZE.jpg",
+        "name": "Glaze",
+        "price": "3980",
+        "inventory": 4,
+        "productCode": "M1-01 Glaze"
+    },
+    {
+        "id": 7,
+        "image": "Images/HELIX.jpg",
+        "name": "Helix",
+        "price": "3980",
+        "inventory": 4,
+        "productCode": "M1-01 Helix"
+    },
+    {
+        "id": 8,
+        "image": "Images/LEGEND.jpg",
+        "name": "Legend",
+        "price": "3800",
+        "inventory": 4,
+        "productCode": "GT-PRO Legend"
+    },
+    {
+        "id": 9,
+        "image": "Images/MONORED.jpg",
+        "name": "Mono Red",
+        "price": "3600",
+        "inventory": 4,
+        "productCode": "SR-X Mono Red"
+    },
+    {
+		"id": 10,
+		"image": "Images/OUTBREAK.jpg",
+		"name": "Outbreak",
+		"price": "3800",
+		"inventory": 4,
+		"productCode": "GT-PRO Outbreak"
+	},
+	{
+		"id": 11,
+		"image": "Images/PRUNER.jpg",
+		"name": "Pruner",
+		"price": "4180",
+		"inventory": 4,
+		"productCode": "SR-09 Pruner"
+	},
+	{
+		"id": 12,
+		"image": "Images/QUARTERBACK.jpg",
+		"name": "Quarterback",
+		"price": "3800",
+		"inventory": 4,
+		"productCode": "GT-PRO Quarterback"
+	},
+	{
+		"id": 13,
+		"image": "Images/RAZOR.jpg",
+		"name": "Razor",
+		"price": "3980",
+		"inventory": 4,
+		"productCode": "M1-01 Razor"
+	},
+	{
+		"id": 14,
+		"image":"Images/REV.jpg",
+		"name":"Rev", 
+		"price":"4180", 
+		"inventory" :4, 
+		"productCode":"SR-09 Rev"
+	},
+	{
+		"id": 15,
+		"image":"Images/SCOUT.jpg",
+		"name":"Scout", 
+		"price":"3980", 
+		"inventory" :4, 
+		"productCode":"SR-X Scout"
+	}
+]
